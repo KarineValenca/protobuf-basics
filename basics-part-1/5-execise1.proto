@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+message Date {
+  // Year of date. Must be from 1 to 999, or 0 if specifying a date without a year.
+  int32 year = 1;
+  // Month of year. Must be from 1 to 12.
+  int32 month = 2;
+  int32 day = 3;
+}
+
+message LatitudeLongitude {
+  double latitude = 1;
+  double longitude = 2;
+}
+
+message Money {
+  string current_code = 1;
+  int64 units = 2;
+  int32 nanos = 3;
+}
+
+message DayOfWeek {
+  enum DayOfWeek {
+    UNDEFINED_DAY = 0;
+    SUNDAY = 1;
+    MONDAY = 2;
+    TUESDAY = 3;
+    WEDNESDAY = 4;
+    THURSDAY = 5;
+    FRIDAY = 6;
+    SATURDAY = 7;
+  }
+  
+  DayOfWeek day_of_week = 0;
+}
+
+message Person {
+  string first_name = 1;
+  repeated string middle_names = 2;
+  string last_name = 3;
+}
