@@ -1,0 +1,1 @@
+protoc -I golang/ --go_out=golang/ golang/simple/simple.proto
