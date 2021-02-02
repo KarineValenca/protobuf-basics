@@ -1,0 +1,21 @@
+// The syntax for this file is proto3
+syntax = "proto3";
+
+package example.enum;
+
+message EnumExample {
+  // the age as of the person's creation
+  int32 id = 1;
+  DaysOfTheWeek day_of_the_week = 2;
+}
+
+enum DaysOfTheWeek {
+  UNDEFINED_DAY = 0;
+  SUNDAY = 1;
+  MONDAY = 2;
+  TUESDAY = 3;
+  WEDNESDAY = 4;
+  THURSDAY = 5;
+  FRIDAY = 6;
+  SATURDAY = 7;
+}
